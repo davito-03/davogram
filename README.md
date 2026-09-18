@@ -6,6 +6,8 @@
 </p>
 
 <p align="center">
+  <a href="https://davito.es/proyectos/davogram">Ficha</a>
+  ·
   <a href="https://davito.es/proyectos">Portfolio</a>
   ·
   <a href="https://github.com/davito-03">@davito-03</a>
@@ -22,7 +24,7 @@
 
 Envías un archivo a **Mensajes Guardados** (películas, vídeo, lo que sea). El userbot lo descarga y lo sube a Drive con el nombre que elijas. rclone va primero; la API de Drive es el respaldo.
 
-`main.py` es el bot de Telegram (recordatorios, premium, etc.). `userbot_drive.py` es la pieza de descargas grandes.
+`main.py` es el bot de Telegram (recordatorios, premium, etc.). `userbot_drive.py` es la pieza de descargas grandes. Diagrama: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Lo que no va en el repo
 
