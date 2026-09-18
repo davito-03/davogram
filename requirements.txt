@@ -1,0 +1,45 @@
+# ─────────────────────────────────────────────
+# DavoGram Bot — requirements.txt
+# Instalar con: pip install -r requirements.txt
+# ─────────────────────────────────────────────
+
+# Telegram Bot framework
+python-telegram-bot==21.6
+
+# Scheduler asíncrono
+APScheduler==3.10.4
+
+# Precios de activos financieros (acciones, índices, crypto)
+yfinance==0.2.54
+
+# ─── IA ───────────────────────────────────────
+# Chat con LLMs
+groq==0.9.0
+cohere==5.5.3
+
+# ─── Búsqueda web ──────────────────────────────
+# Búsqueda financiera y de noticias
+tavily-python==0.3.8
+
+# ─── Gráficos ─────────────────────────────────
+matplotlib==3.9.2
+
+# ─── Utilidades ───────────────────────────────
+pytz==2024.1
+requests>=2.31.0
+
+# ─── Google Drive ─────────────────────────────
+google-api-python-client>=2.100.0
+google-auth>=2.23.0
+google-auth-oauthlib>=1.2.0
+
+# ─── Userbot (Descargas sin límite) ───────────
+pyrogram==2.0.106
+tgcrypto==1.2.5
+
+# ─── Optimización de archivos ─────────────────
+imageio-ffmpeg>=0.4.9
+Pillow>=10.0.0
+
+# ─── Descargas multimedia ─────────────────────
+yt-dlp>=2024.0.0
