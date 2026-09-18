@@ -1,32 +1,47 @@
-# DavoGram + userbot Drive
+<h1 align="center">DavoGram + userbot Drive</h1>
 
-Bot de Telegram (DavoGram) y un **userbot** con Pyrogram que sube a Google Drive los archivos que mandas a Mensajes Guardados, sin comprimirlos.
+<p align="center">
+  Userbot de Telegram que sube multimedia a Google Drive <strong>sin comprimir</strong>.<br>
+  Pyrogram + rclone. Lo opero en el mismo VPS que el resto del homelab.
+</p>
 
-Pensado para películas y archivos grandes: rclone primero, API de Drive como respaldo.
+<p align="center">
+  <a href="https://davito.es/proyectos">Portfolio</a>
+  ·
+  <a href="https://github.com/davito-03">@davito-03</a>
+</p>
 
-## Piezas
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white">
+  <img alt="Pyrogram" src="https://img.shields.io/badge/Pyrogram-Telegram-26A5E4?logo=telegram&logoColor=white">
+  <img alt="Drive" src="https://img.shields.io/badge/Google%20Drive-rclone-4285F4?logo=googledrive&logoColor=white">
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow">
+</p>
 
-- `userbot_drive.py` — descarga desde Telegram y sube a Drive
-- `main.py` — bot de Telegram (recordatorios, premium, etc.)
-- `features/` — módulos del bot
-- `config.py` — todo sale de variables de entorno
+## Qué hace
 
-## No va en el repo
+Envías un archivo a **Mensajes Guardados** (películas, vídeo, lo que sea). El userbot lo descarga y lo sube a Drive con el nombre que elijas. rclone va primero; la API de Drive es el respaldo.
 
-Sesión de Pyrogram (`*.session`), `cookies.txt`, `credentials.json`, `gdrive_credentials.json`, `token.json`, la SQLite. Sin eso el userbot no puede entrar en tu cuenta, y así debe ser.
+`main.py` es el bot de Telegram (recordatorios, premium, etc.). `userbot_drive.py` es la pieza de descargas grandes.
+
+## Lo que no va en el repo
+
+Sesión de Pyrogram (`*.session`), cookies, `credentials.json`, `gdrive_credentials.json`, `token.json`, SQLite. Sin eso no entra en la cuenta, y así debe ser. Todo lo sensible sale de `.env`.
 
 ## Arranque
 
-1. `API_ID` y `API_HASH` en [my.telegram.org](https://my.telegram.org).
-2. Token del bot con [@BotFather](https://t.me/BotFather) si usas `main.py`.
-3. Credenciales de Google Drive / rclone aparte.
-
 ```bash
 cp .env.example .env
-python -m venv venv
-source venv/bin/activate
+# API_ID / API_HASH en my.telegram.org
+# BOT_TOKEN con @BotFather si usas main.py
+python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 python userbot_drive.py
 ```
 
-La primera vez Pyrogram pide el teléfono y el código; genera `my_account.session` en local. No lo subas.
+La primera vez Pyrogram pide el teléfono y genera `my_account.session`. No lo subas.
+
+## Relacionado
+
+- [davito.es/proyectos](https://davito.es/proyectos)
+- Homelab: [homepage](https://github.com/davito-03/homepage)
